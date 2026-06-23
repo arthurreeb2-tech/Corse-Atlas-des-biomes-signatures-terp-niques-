@@ -9,18 +9,8 @@ Atlas web autonome qui cartographie la Corse selon ses milieux naturels et les m
 
 ## Voir en ligne
 
-> Les pages s'ouvrent rendues, pas en code source.
-
-**Via GitHub Pages** (recommandé — à activer une fois dans *Settings → Pages → branche `main` / `/(root)`*) :
-
-- [▶ Les cours (7 modules)](https://arthurreeb2-tech.github.io/Corse-Atlas-des-biomes-signatures-terp-niques-/index.html)
+- [▶ Les cours (6 modules)](https://arthurreeb2-tech.github.io/Corse-Atlas-des-biomes-signatures-terp-niques-/index.html)
 - [▶ L'atlas interactif](https://arthurreeb2-tech.github.io/Corse-Atlas-des-biomes-signatures-terp-niques-/atlas_corse.html)
-
-**Sans rien configurer** (proxy htmlpreview, chargement plus lent pour l'atlas) :
-
-- [▶ Les cours](https://htmlpreview.github.io/?https://github.com/arthurreeb2-tech/Corse-Atlas-des-biomes-signatures-terp-niques-/blob/main/index.html)
-- [▶ L'atlas](https://htmlpreview.github.io/?https://github.com/arthurreeb2-tech/Corse-Atlas-des-biomes-signatures-terp-niques-/blob/main/atlas_corse.html)
-
 
 # Genèse du projet — une question née en mouvement
 
