@@ -4,7 +4,9 @@ Un atlas interactif des biomes, étages altitudinaux et signatures terpéniques 
 
 <img width="1889" height="946" alt="image" src="https://github.com/user-attachments/assets/8ebb9f5b-ed64-4d01-9bcd-51a8e0522635" />
 
-Genèse du projet — une question née en mouvement
+
+# Genèse du projet — une question née en mouvement
+
 Ce projet n'a pas commencé devant un écran. Il a commencé sur les routes et les sentiers du sud de la Corse, en courant.
 À l'effort, quelque chose s'impose qu'on ignore au repos : l'odeur du paysage. La garrigue chauffée, la résine des pins, l'immortelle, le myrte — des bouffées qui changent à chaque virage, à chaque versant.
 
