@@ -1,6 +1,8 @@
 # Atlas des biomes et terpènes Corse
 
-Un atlas interactif des biomes, étages altitudinaux et signatures terpéniques de l'île.  Une application web autonome qui cartographie la Corse selon ses milieux naturels et les met en relation avec leur identité botanique, forestière et olfactive (composés terpéniques).
+**Atlas interactif des biomes, étages altitudinaux et signatures terpéniques de l'île.**
+
+Atlas web autonome qui cartographie la Corse selon ses milieux naturels et les met en relation avec leur identité botanique, forestière et olfactive (composés terpéniques). On explore l'île depuis une carte cliquable et une coupe altitudinale, puis on croise les données via plusieurs fiches et un comparateur A / B.
 
 <img width="1889" height="946" alt="image" src="https://github.com/user-attachments/assets/8ebb9f5b-ed64-4d01-9bcd-51a8e0522635" />
 
@@ -18,3 +20,23 @@ Le point de départ formel était un Speed Défi : un exercice de conception sou
 J'ai organiser l'Atlas autour d'un cours qui explique mon raisonnement. Il part de la molécule (qu'est-ce qu'un terpène ?), traverse ce que la science sait vraiment de l'air des forêts sur le corps humain — ni plus, ni moins — présente l'atlas construit, et aboutit à trois hypothèses concrètes sur des « cocktails » terpéniques corses. 
 
 À aucun moment il ne prétend conclure ce qui n'est pas prouvé. Son ambition est plus juste, et plus utile : montrer comment une sensation personnelle peut devenir une hypothèse de recherche défendable.
+
+## Contenu
+
+Trois échelles de lecture du territoire :
+
+- **6 biomes géographiques** — Littoral Nord · Plaine Orientale · Macchia intérieure · Haute Montagne · Alta Rocca · Extrême-Sud — positionnés sur une carte SVG de la Corse, chacun avec sa zone (villes / massifs), sa couleur et son profil sensoriel.
+- **5 étages altitudinaux** (classification de Gamisans) — thermo-, méso-, supraméditerranéen, montagnard, subalpin / alpin.
+- **Les forêts** corses et leur filière — chronologie, sylviculture, tensions.
+
+## Vues
+
+| Onglet | Rôle |
+|---|---|
+| **Fiche étage** | Sélection d'un étage (menu ou clic carte / coupe) → fiche détaillée |
+| **Forêts** | Fiches forestières détaillées |
+| **Biomes** | Fiche par biome géographique |
+| **Comparaison** | Comparateur deux colonnes (étage / forêt / biome) avec radar terpénique superposé et étages communs / exclusifs |
+| **Sonde** | Exploration ciblée des signatures |
+
+L'UI est unifiée entre les fiches : menu déroulant + bouton **Comparer →** + raccourci par la carte. Carte interactive, coupe altitudinale et graphiques radar des profils terpéniques.
