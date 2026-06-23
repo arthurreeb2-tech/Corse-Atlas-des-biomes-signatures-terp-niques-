@@ -40,3 +40,33 @@ Trois échelles de lecture du territoire :
 | **Sonde** | Exploration ciblée des signatures |
 
 L'UI est unifiée entre les fiches : menu déroulant + bouton **Comparer →** + raccourci par la carte. Carte interactive, coupe altitudinale et graphiques radar des profils terpéniques.
+
+
+## Sources
+
+L'atlas s'appuie exclusivement sur des données ouvertes officielles et sur la littérature scientifique. Aucune donnée n'est inventée.
+
+### Données & cartographie (webographie)
+
+| Source | Usage dans l'atlas | Accès |
+|---|---|---|
+| **IGN — Géoplateforme** | Contour réel de l'île, fonds topographiques | <https://geoservices.ign.fr> |
+| **BD Forêt® v2** (IGN, licence Étalab 2.0) | 64 785 polygones d'essences forestières | <https://geoservices.ign.fr/bdforet> |
+| **RGE ALTI®** (IGN) | 422 points d'altimétrie mesurée (coupe altitudinale) | <https://geoservices.ign.fr/rgealti> |
+| **GBIF** — Global Biodiversity Information Facility | 25 068 occurrences d'espèces géolocalisées | <https://www.gbif.org> |
+
+### Bibliographie scientifique
+
+**Phytosociologie & flore de Corse**
+- **Gamisans, J. (1991)** — *La végétation de la Corse.* Référence des 5 étages altitudinaux (thermo-, méso-, supraméditerranéen, montagnard, subalpin / alpin).
+- **Paradis, G. (2004)** — Travaux sur la flore et les milieux corses.
+
+**Terpènes — chimie & effets sensoriels**
+- **Satou et al. (2014)** — PMID [25340185](https://pubmed.ncbi.nlm.nih.gov/25340185/)
+- **Moss & Oliver (2012)** — Effets cognitifs des composés aromatiques volatils.
+- **Fukutani et al. (2023)** — PMC [10394640](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10394640/)
+- PMC [9983847](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9983847/)
+- PMC [12249661](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12249661/)
+
+**Filière bois & matériau**
+- **Belloncle / LIMBHA** — École Supérieure du Bois (ESB), Nantes.
