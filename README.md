@@ -1,4 +1,4 @@
-# Corse-Atlas-des-biomes-signatures-terp-niques-
+# Atlas des biomes et terpènes Corse
 
 <img width="1889" height="946" alt="image" src="https://github.com/user-attachments/assets/8ebb9f5b-ed64-4d01-9bcd-51a8e0522635" />
 
