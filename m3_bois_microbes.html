@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le bois qui assainit · Six-Huitième</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Archivo+Narrow:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sapin:#16221B; --sapin-deep:#0E140F; --sauge:#5F7256; --sauge-soft:#73876A;
+  --chene:#A07E3C; --chene-deep:#8A6B2E; --creme:#EFE8D8; --papier:#F6F2E9;
+  --ink:#2C352B; --ink-soft:#4A5246; --muted:#6B6354;
+  --surface:#FFFFFF; --line:#E3DAC6; --line-soft:#D8CDB4;
+  --din:'Oswald','Arial Narrow',sans-serif;
+  --din-alt:'Archivo Narrow',sans-serif;
+  --bodoni:'Bodoni Moda',Georgia,serif;
+  --walk:system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:var(--walk);line-height:1.75;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--sauge) .5px,transparent .5px),linear-gradient(90deg,var(--sauge) .5px,transparent .5px);background-size:48px 48px;opacity:.04}
+.prog{position:fixed;top:0;left:0;height:3px;background:var(--sauge);z-index:50;width:0;transition:width .1s}
+main{position:relative;z-index:1}
+.wrap{max-width:880px;margin:0 auto;padding:0 26px}
+.kicker{font-family:var(--din-alt);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sauge);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:'';width:24px;height:1px;background:var(--sauge)}
+.hero{padding:78px 0 54px;border-bottom:1px solid var(--line)}
+.modnum{font-family:var(--bodoni);font-style:italic;font-size:20px;color:var(--chene-deep);margin-bottom:20px}
+.hero h1{font-family:var(--din);font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;font-size:clamp(32px,6vw,60px);color:var(--sapin);margin-bottom:20px}
+.hero .lede{font-size:clamp(16px,2.3vw,20px);color:var(--ink-soft);max-width:660px;line-height:1.6}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+section h2{font-family:var(--din);font-weight:500;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(22px,3.4vw,31px);color:var(--sapin);margin-bottom:22px;line-height:1.12}
+section h3{font-family:var(--din-alt);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--sauge);margin:30px 0 10px}
+section p{margin-bottom:17px;color:var(--ink);max-width:720px}
+section p strong{color:var(--sapin);font-weight:600}
+em{font-family:var(--bodoni);font-style:italic;color:var(--chene-deep);font-size:1.04em}
+a{color:var(--sauge);text-decoration:none;border-bottom:1px solid var(--line-soft)}
+a:hover{color:var(--chene-deep)}
+figure{margin:28px 0}
+figure img{width:100%;height:auto;border-radius:8px;display:block;border:1px solid var(--line);background:var(--surface)}
+figure.mol,figure:has(img[src$=".svg"]){display:flex;flex-direction:column;align-items:center}
+figure.mol img,figure img[src$=".svg"]{width:auto;max-width:200px;max-height:200px;padding:18px 22px;margin:0 auto}
+figure.mol figcaption,figure:has(img[src$=".svg"]) figcaption{text-align:center}
+figcaption{font-family:var(--din-alt);font-size:12px;letter-spacing:.04em;color:var(--muted);margin-top:8px;line-height:1.5}
+.svgbox{margin:28px 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
+.stat{background:var(--surface);padding:22px 18px}
+.stat .n{font-family:var(--bodoni);font-style:italic;font-weight:500;font-size:34px;color:var(--chene-deep);line-height:1}
+.stat .l{font-family:var(--din-alt);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+@media(max-width:640px){.stats{grid-template-columns:1fr}}
+ul.clean{list-style:none;margin:14px 0 8px;max-width:720px}
+ul.clean li{padding:10px 0 10px 26px;position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
+ul.clean li::before{content:'';position:absolute;left:0;top:18px;width:8px;height:8px;background:var(--sauge);border-radius:50%}
+ul.clean li b{color:var(--sapin);font-weight:600}
+.callout{border-left:2px solid var(--chene);padding:6px 0 6px 22px;margin:26px 0;max-width:720px}
+.callout p{font-family:var(--bodoni);font-style:italic;font-size:18px;color:var(--chene-deep);margin:0;line-height:1.5}
+.retenir{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:24px 26px;margin:30px 0}
+.retenir h3{margin-top:0;color:var(--chene-deep)}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.tags span{font-family:var(--din-alt);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--sauge);border:1px solid var(--line-soft);border-radius:6px;padding:6px 12px}
+.quiz{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:24px 26px;margin:30px 0}
+.quiz .q{font-family:var(--din-alt);text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:var(--sapin);margin-bottom:14px}
+.quiz button{display:block;width:100%;text-align:left;background:var(--papier);color:var(--ink);border:1px solid var(--line-soft);border-radius:7px;padding:12px 15px;margin-bottom:8px;font-family:var(--walk);font-size:15px;cursor:pointer;transition:.15s}
+.quiz button:hover{border-color:var(--sauge)}
+.quiz button.ok{background:rgba(95,114,86,.14);border-color:var(--sauge);color:var(--sapin)}
+.quiz button.no{background:rgba(160,90,90,.1);border-color:#b08585}
+.quiz .fb{font-size:14px;color:var(--sauge);margin-top:6px;min-height:1.2em}
+.src{font-family:var(--din-alt);font-size:12px;color:var(--muted);line-height:1.6}
+.src b{color:var(--sauge);font-weight:500}
+.nav{display:flex;justify-content:space-between;gap:14px;padding:40px 0 70px;flex-wrap:wrap}
+.nav a{flex:1;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.nav a:hover{border-color:var(--sauge)}
+.nav .dir{font-family:var(--din-alt);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav .ttl{font-family:var(--din);text-transform:uppercase;letter-spacing:.02em;color:var(--sapin);font-size:17px;margin-top:5px}
+.nav a.next{text-align:right}
+footer{padding:30px 0 60px;text-align:center}
+footer .sig{font-family:var(--din-alt);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+footer .sig b{color:var(--sauge)}
+.tag-hyp{display:inline-block;font-family:var(--din-alt);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--chene-deep);border:1px solid rgba(160,126,60,.5);border-radius:5px;padding:3px 9px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<main><header class="hero"><div class="wrap">
+  <div class="modnum">Module 3 / 7</div>
+  <div class="kicker">Terpènes des forêts corses</div>
+  <h1>Le bois qui assainit</h1>
+  <p class="lede">Le point de bascule du projet : si le bois-matériau limite la vie des microbes, qu'en est-il des molécules que les arbres libèrent dans l'air ?</p>
+</div></header><div class="wrap"><section>
+<div class="kicker">Le point de départ</div>
+<h2>Une propriété surprenante du bois</h2>
+<p>On a longtemps soupçonné le bois d'être un matériau « sale » à cause de sa porosité, un nid à bactéries comparé aux surfaces lisses. Les travaux sur la sécurité microbiologique du bois ont retourné cette intuition. <strong>La porosité du bois ne dégrade pas son hygiène ; elle peut même l'améliorer</strong> : sa surface rugueuse crée des conditions défavorables aux micro-organismes.</p>
+<p>Plus frappant encore : le bois <strong>produit des composés antimicrobiens</strong> capables d'inhiber ou de limiter la croissance de micro-organismes pathogènes. Ces composés relèvent de quelques familles : phénols, lignanes, tanins, et surtout <strong>terpénoïdes</strong>, les molécules qui nous occupent.</p>
+<p class="src">Source : Aviat et al. (2016), <i>Comprehensive Reviews in Food Science and Food Safety</i>, doi:10.1111/1541-4337.12199</p>
+</section><section>
+<div class="kicker">Le mécanisme</div>
+<h2>Comment une molécule de bois neutralise un microbe</h2><figure><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Staphylococcus_aureus_VISA_2.jpg" alt="" loading="lazy"><figcaption>Staphylococcus aureus, l'une des bactéries Gram-positives sensibles aux terpénoïdes du bois. Image CDC/Matthew J. Arduino — domaine public.</figcaption></figure>
+<p>L'effet n'est pas magique, il est physico-chimique. Les composés terpéniques sont <strong>lipophiles</strong> : ils se glissent dans la membrane des bactéries, entre les phospholipides, et en perturbent la structure et la perméabilité. La cellule fuit, ses échanges se dérèglent, sa croissance s'arrête. Selon la concentration, l'effet va du ralentissement (bactériostatique) à la mort cellulaire (bactéricide).</p>
+<p>Ce point compte pour la suite, car il pose une <strong>limite honnête</strong> : ces effets sont surtout démontrés au <em>contact</em>, avec des extraits ou des huiles concentrées, sur des bactéries précises. Respirer des molécules diluées dans l'air d'une forêt n'est pas la même chose.</p>
+<p class="src">Source : Cunha et al. (2018), <i>Journal of Applied Microbiology</i>, doi:10.1111/jam.13911</p>
+</section><div class="svgbox">
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" font-family="Archivo Narrow, sans-serif">
+<defs><marker id="arrT" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#8A6B2E"/></marker></defs>
+<text x="380" y="30" fill="#5F7256" font-size="13" text-anchor="middle" letter-spacing="2.5" style="text-transform:uppercase">Action d’un terpène sur une membrane bactérienne</text>
+<line x1="262" y1="64" x2="262" y2="196" stroke="#E3DAC6" stroke-width="1" stroke-dasharray="2 5"/><line x1="498" y1="64" x2="498" y2="196" stroke="#E3DAC6" stroke-width="1" stroke-dasharray="2 5"/>
+<g>
+    <line x1="49.6" y1="99" x2="49.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="54.4" y1="99" x2="54.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="52" cy="92" r="6" fill="#5F7256"/>
+    <line x1="49.6" y1="171" x2="49.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="54.4" y1="171" x2="54.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="52" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="66.6" y1="99" x2="66.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="71.4" y1="99" x2="71.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="69" cy="92" r="6" fill="#5F7256"/>
+    <line x1="66.6" y1="171" x2="66.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="71.4" y1="171" x2="71.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="69" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="83.6" y1="99" x2="83.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="88.4" y1="99" x2="88.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="86" cy="92" r="6" fill="#5F7256"/>
+    <line x1="83.6" y1="171" x2="83.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="88.4" y1="171" x2="88.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="86" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="100.6" y1="99" x2="100.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="105.4" y1="99" x2="105.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="103" cy="92" r="6" fill="#5F7256"/>
+    <line x1="100.6" y1="171" x2="100.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="105.4" y1="171" x2="105.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="103" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="117.6" y1="99" x2="117.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="122.4" y1="99" x2="122.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="120" cy="92" r="6" fill="#5F7256"/>
+    <line x1="117.6" y1="171" x2="117.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="122.4" y1="171" x2="122.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="120" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="134.6" y1="99" x2="134.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="139.4" y1="99" x2="139.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="137" cy="92" r="6" fill="#5F7256"/>
+    <line x1="134.6" y1="171" x2="134.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="139.4" y1="171" x2="139.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="137" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="151.6" y1="99" x2="151.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="156.4" y1="99" x2="156.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="154" cy="92" r="6" fill="#5F7256"/>
+    <line x1="151.6" y1="171" x2="151.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="156.4" y1="171" x2="156.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="154" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="168.6" y1="99" x2="168.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="173.4" y1="99" x2="173.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="171" cy="92" r="6" fill="#5F7256"/>
+    <line x1="168.6" y1="171" x2="168.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="173.4" y1="171" x2="173.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="171" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="185.6" y1="99" x2="185.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="190.4" y1="99" x2="190.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="188" cy="92" r="6" fill="#5F7256"/>
+    <line x1="185.6" y1="171" x2="185.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="190.4" y1="171" x2="190.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="188" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="202.6" y1="99" x2="202.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="207.4" y1="99" x2="207.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="205" cy="92" r="6" fill="#5F7256"/>
+    <line x1="202.6" y1="171" x2="202.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="207.4" y1="171" x2="207.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="205" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="219.6" y1="99" x2="219.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="224.4" y1="99" x2="224.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="222" cy="92" r="6" fill="#5F7256"/>
+    <line x1="219.6" y1="171" x2="219.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="224.4" y1="171" x2="224.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="222" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="285.6" y1="99" x2="285.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="290.4" y1="99" x2="290.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="288" cy="92" r="6" fill="#5F7256"/>
+    <line x1="285.6" y1="171" x2="285.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="290.4" y1="171" x2="290.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="288" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="302.6" y1="99" x2="302.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="307.4" y1="99" x2="307.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="305" cy="92" r="6" fill="#5F7256"/>
+    <line x1="302.6" y1="171" x2="302.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="307.4" y1="171" x2="307.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="305" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="319.6" y1="99" x2="319.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="324.4" y1="99" x2="324.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="322" cy="92" r="6" fill="#5F7256"/>
+    <line x1="319.6" y1="171" x2="319.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="324.4" y1="171" x2="324.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="322" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="336.6" y1="99" x2="336.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="341.4" y1="99" x2="341.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="339" cy="92" r="6" fill="#5F7256"/>
+    <line x1="336.6" y1="171" x2="336.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="341.4" y1="171" x2="341.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="339" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="353.6" y1="99" x2="353.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="358.4" y1="99" x2="358.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="356" cy="92" r="6" fill="#5F7256"/>
+    <line x1="353.6" y1="171" x2="353.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="358.4" y1="171" x2="358.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="356" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="370.6" y1="99" x2="370.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="375.4" y1="99" x2="375.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="373" cy="92" r="6" fill="#5F7256"/>
+    <line x1="370.6" y1="171" x2="370.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="375.4" y1="171" x2="375.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="373" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="387.6" y1="99" x2="387.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="392.4" y1="99" x2="392.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="390" cy="92" r="6" fill="#5F7256"/>
+    <line x1="387.6" y1="171" x2="387.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="392.4" y1="171" x2="392.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="390" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="404.6" y1="99" x2="404.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="409.4" y1="99" x2="409.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="407" cy="92" r="6" fill="#5F7256"/>
+    <line x1="404.6" y1="171" x2="404.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="409.4" y1="171" x2="409.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="407" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="421.6" y1="99" x2="421.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="426.4" y1="99" x2="426.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="424" cy="92" r="6" fill="#5F7256"/>
+    <line x1="421.6" y1="171" x2="421.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="426.4" y1="171" x2="426.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="424" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="438.6" y1="99" x2="438.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="443.4" y1="99" x2="443.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="441" cy="92" r="6" fill="#5F7256"/>
+    <line x1="438.6" y1="171" x2="438.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="443.4" y1="171" x2="443.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="441" cy="178" r="6" fill="#5F7256"/>
+  </g><g>
+    <line x1="455.6" y1="99" x2="455.6" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="460.4" y1="99" x2="460.4" y2="126" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="458" cy="92" r="6" fill="#5F7256"/>
+    <line x1="455.6" y1="171" x2="455.6" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <line x1="460.4" y1="171" x2="460.4" y2="144" stroke="#8A9C80" stroke-width="2"/>
+    <circle cx="458" cy="178" r="6" fill="#5F7256"/>
+  </g><path d="M380,58 L380,120" fill="none" stroke="#8A6B2E" stroke-width="1.6" marker-end="url(#arrT)"/>
+   <polygon points="367,135 380,127 393,135 393,150 380,158 367,150" fill="#8A6B2E"/>
+   <text x="380" y="146" fill="#fff" font-size="11" text-anchor="middle" font-weight="bold">T</text><g>
+    <line x1="518.4401027864002" y1="100.55478941269848" x2="518.4401027864002" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="523.2401027864001" y1="100.55478941269848" x2="523.2401027864001" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="520.8401027864002" cy="93.55478941269848" r="6" fill="#9C6B6B"/>
+    <line x1="518.4401027864002" y1="169.44521058730152" x2="518.4401027864002" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="523.2401027864001" y1="169.44521058730152" x2="523.2401027864001" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="520.8401027864002" cy="176.44521058730152" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="540.8655668632877" y1="102.89529461778933" x2="540.8655668632877" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="545.6655668632876" y1="102.89529461778933" x2="545.6655668632876" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="543.2655668632876" cy="95.89529461778933" r="6" fill="#9C6B6B"/>
+    <line x1="540.8655668632877" y1="167.10470538221068" x2="540.8655668632877" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="545.6655668632876" y1="167.10470538221068" x2="545.6655668632876" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="543.2655668632876" cy="174.10470538221068" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="555.0870816674746" y1="98.76253567124633" x2="555.0870816674746" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="559.8870816674746" y1="98.76253567124633" x2="559.8870816674746" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="557.4870816674746" cy="91.76253567124633" r="6" fill="#9C6B6B"/>
+    <line x1="555.0870816674746" y1="171.23746432875367" x2="555.0870816674746" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="559.8870816674746" y1="171.23746432875367" x2="559.8870816674746" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="557.4870816674746" cy="178.23746432875367" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="571.1659488408478" y1="95.02439882070405" x2="571.1659488408478" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="575.9659488408478" y1="95.02439882070405" x2="575.9659488408478" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="573.5659488408478" cy="88.02439882070405" r="6" fill="#9C6B6B"/>
+    <line x1="571.1659488408478" y1="174.97560117929595" x2="571.1659488408478" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="575.9659488408478" y1="174.97560117929595" x2="575.9659488408478" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="573.5659488408478" cy="181.97560117929595" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="592.4377251950474" y1="97.89298087599263" x2="592.4377251950474" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="597.2377251950473" y1="97.89298087599263" x2="597.2377251950473" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="594.8377251950474" cy="90.89298087599263" r="6" fill="#9C6B6B"/>
+    <line x1="592.4377251950474" y1="172.10701912400737" x2="592.4377251950474" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="597.2377251950473" y1="172.10701912400737" x2="597.2377251950473" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="594.8377251950474" cy="179.10701912400737" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="640.0452381048505" y1="96.18501611037678" x2="640.0452381048505" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="644.8452381048504" y1="96.18501611037678" x2="644.8452381048504" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="642.4452381048504" cy="89.18501611037678" r="6" fill="#9C6B6B"/>
+    <line x1="640.0452381048505" y1="173.81498388962322" x2="640.0452381048505" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="644.8452381048504" y1="173.81498388962322" x2="644.8452381048504" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="642.4452381048504" cy="180.81498388962322" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="656.2040123802399" y1="95.72312359026829" x2="656.2040123802399" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="661.0040123802398" y1="95.72312359026829" x2="661.0040123802398" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="658.6040123802399" cy="88.72312359026829" r="6" fill="#9C6B6B"/>
+    <line x1="656.2040123802399" y1="174.27687640973173" x2="656.2040123802399" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="661.0040123802398" y1="174.27687640973173" x2="661.0040123802398" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="658.6040123802399" cy="181.27687640973173" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="677.4178621881209" y1="100.70679775350601" x2="677.4178621881209" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="682.2178621881209" y1="100.70679775350601" x2="682.2178621881209" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="679.8178621881209" cy="93.70679775350601" r="6" fill="#9C6B6B"/>
+    <line x1="677.4178621881209" y1="169.293202246494" x2="677.4178621881209" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="682.2178621881209" y1="169.293202246494" x2="682.2178621881209" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="679.8178621881209" cy="176.293202246494" r="6" fill="#9C6B6B"/>
+  </g><g>
+    <line x1="688.4278205004937" y1="102.85408756178305" x2="688.4278205004937" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="693.2278205004936" y1="102.85408756178305" x2="693.2278205004936" y2="126" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="690.8278205004937" cy="95.85408756178305" r="6" fill="#9C6B6B"/>
+    <line x1="688.4278205004937" y1="167.14591243821695" x2="688.4278205004937" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <line x1="693.2278205004936" y1="167.14591243821695" x2="693.2278205004936" y2="144" stroke="#B58E8E" stroke-width="2"/>
+    <circle cx="690.8278205004937" cy="174.14591243821695" r="6" fill="#9C6B6B"/>
+  </g><circle cx="616" cy="135" r="3.4" fill="#8A6B2E"/>
+   <circle cx="607" cy="150" r="3" fill="#A07E3C"/>
+   <circle cx="624" cy="158" r="2.6" fill="#A07E3C"/>
+   <circle cx="618" cy="170" r="3.2" fill="#8A6B2E"/>
+   <circle cx="610" cy="184" r="2.4" fill="#A07E3C"/>
+<text x="144" y="218" fill="#2C352B" font-size="12.5" text-anchor="middle" font-weight="600">1</text><text x="144" y="236" fill="#6B6354" font-size="11.5" text-anchor="middle">Bicouche lipidique saine</text><text x="380" y="218" fill="#2C352B" font-size="12.5" text-anchor="middle" font-weight="600">2</text><text x="380" y="236" fill="#6B6354" font-size="11.5" text-anchor="middle">Le terpène lipophile s’insère</text><text x="616" y="218" fill="#2C352B" font-size="12.5" text-anchor="middle" font-weight="600">3</text><text x="616" y="236" fill="#6B6354" font-size="11.5" text-anchor="middle">La membrane se désorganise et fuit</text>
+</svg>
+</div><figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Maquis_and_garrigue_in_Corsica5.jpg" alt="" loading="lazy"><figcaption>Maquis et garrigue en Corse : la végétation odorante du sud de l'île. Photo Sten Porse — CC BY-SA 3.0.</figcaption></figure><section>
+<div class="kicker">Le saut, et sa prudence</div>
+<h2>Du plan de travail à l'air de la forêt</h2>
+<p>Voici le moment charnière du projet, et celui où il faut être le plus rigoureux. Le raisonnement tentant : <em>« le bois assainit par ses terpènes → la forêt libère des terpènes dans l'air → donc l'air de la forêt assainit et soigne »</em>. Il est <strong>séduisant mais incomplet</strong> : il enjambe une différence réelle.</p>
+<ul class="clean">
+<li><b>Le bois-matériau</b> agit par contact, avec des molécules concentrées, sur des surfaces.</li>
+<li><b>L'air forestier</b> nous expose à des molécules <em>diluées</em>, inhalées, dans un tout autre régime de dose et de voie d'entrée.</li>
+</ul>
+<p>Deux phénomènes liés par la chimie, mais distincts par le mécanisme. Reconnaître cette distinction n'affaiblit pas l'intuition : ça la transforme en <strong>vraie question de recherche</strong>, celle que les modules suivants instruisent.</p>
+<div class="retenir"><h3>À retenir</h3>
+<p>Le bois produit des terpénoïdes antimicrobiens qui désorganisent les membranes bactériennes. Mais cet effet est démontré au contact, à forte concentration. Étendre ce résultat à l'air respiré en forêt est une hypothèse à instruire, pas une conclusion acquise.</p></div>
+</section><section>
+<div class="quiz">
+<div class="q">Pourquoi ne peut-on pas conclure directement que « l'air de la forêt soigne » à partir des travaux sur le bois antimicrobien ?</div>
+<button data-ok="1" data-fb="Contact concentré vs inhalation diluée : deux régimes différents." onclick="pick(this,true)">Parce que le bois agit au contact concentré, pas par inhalation diluée</button>
+<button data-fb="Les terpènes du bois et de l'air sont bien les mêmes familles." onclick="pick(this,false)">Parce que ce ne sont pas les mêmes molécules</button>
+<button data-fb="Le bois a bien un effet : ce n'est pas la question." onclick="pick(this,false)">Parce que le bois n'a aucun effet réel</button>
+<div class="fb"></div>
+</div>
+</section><div class="wrap"><nav class="nav"><a class="prev" href="m2_terpene.html"><div class="dir">← Précédent</div><div class="ttl">Qu'est-ce qu'un terpène</div></a><a class="next" href="m4_parfums_air.html"><div class="dir">Suivant →</div><div class="ttl">La science des parfums</div></a></nav></div></div><footer><div class="wrap"><div class="sig">Six-Huitième <b>·</b> Arthur Reeb <b>·</b> Studio structure bois</div></div></footer>
+</main>
+<script>
+const prog=document.getElementById('prog');
+addEventListener('scroll',()=>{const h=document.documentElement;const s=h.scrollTop/(h.scrollHeight-h.clientHeight);prog.style.width=(s*100)+'%';});
+function pick(btn,ok){const box=btn.closest('.quiz');const fb=box.querySelector('.fb');box.querySelectorAll('button').forEach(b=>b.disabled=true);if(ok){btn.classList.add('ok');fb.textContent='✓ '+(btn.dataset.fb||'Exact.');}else{btn.classList.add('no');fb.textContent='✗ '+(btn.dataset.fb||'Pas tout à fait.');box.querySelectorAll('button').forEach(b=>{if(b.dataset.ok==='1')b.classList.add('ok');});}}
+</script>
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La science des parfums · Six-Huitième</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Archivo+Narrow:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sapin:#16221B; --sapin-deep:#0E140F; --sauge:#5F7256; --sauge-soft:#73876A;
+  --chene:#A07E3C; --chene-deep:#8A6B2E; --creme:#EFE8D8; --papier:#F6F2E9;
+  --ink:#2C352B; --ink-soft:#4A5246; --muted:#6B6354;
+  --surface:#FFFFFF; --line:#E3DAC6; --line-soft:#D8CDB4;
+  --din:'Oswald','Arial Narrow',sans-serif;
+  --din-alt:'Archivo Narrow',sans-serif;
+  --bodoni:'Bodoni Moda',Georgia,serif;
+  --walk:system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--papier);color:var(--ink);font-family:var(--walk);line-height:1.75;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--sauge) .5px,transparent .5px),linear-gradient(90deg,var(--sauge) .5px,transparent .5px);background-size:48px 48px;opacity:.04}
+.prog{position:fixed;top:0;left:0;height:3px;background:var(--sauge);z-index:50;width:0;transition:width .1s}
+main{position:relative;z-index:1}
+.wrap{max-width:880px;margin:0 auto;padding:0 26px}
+.kicker{font-family:var(--din-alt);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sauge);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:'';width:24px;height:1px;background:var(--sauge)}
+.hero{padding:78px 0 54px;border-bottom:1px solid var(--line)}
+.modnum{font-family:var(--bodoni);font-style:italic;font-size:20px;color:var(--chene-deep);margin-bottom:20px}
+.hero h1{font-family:var(--din);font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;font-size:clamp(32px,6vw,60px);color:var(--sapin);margin-bottom:20px}
+.hero .lede{font-size:clamp(16px,2.3vw,20px);color:var(--ink-soft);max-width:660px;line-height:1.6}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+section h2{font-family:var(--din);font-weight:500;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(22px,3.4vw,31px);color:var(--sapin);margin-bottom:22px;line-height:1.12}
+section h3{font-family:var(--din-alt);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--sauge);margin:30px 0 10px}
+section p{margin-bottom:17px;color:var(--ink);max-width:720px}
+section p strong{color:var(--sapin);font-weight:600}
+em{font-family:var(--bodoni);font-style:italic;color:var(--chene-deep);font-size:1.04em}
+a{color:var(--sauge);text-decoration:none;border-bottom:1px solid var(--line-soft)}
+a:hover{color:var(--chene-deep)}
+figure{margin:28px 0}
+figure img{width:100%;height:auto;border-radius:8px;display:block;border:1px solid var(--line);background:var(--surface)}
+figure.mol,figure:has(img[src$=".svg"]){display:flex;flex-direction:column;align-items:center}
+figure.mol img,figure img[src$=".svg"]{width:auto;max-width:200px;max-height:200px;padding:18px 22px;margin:0 auto}
+figure.mol figcaption,figure:has(img[src$=".svg"]) figcaption{text-align:center}
+figcaption{font-family:var(--din-alt);font-size:12px;letter-spacing:.04em;color:var(--muted);margin-top:8px;line-height:1.5}
+.svgbox{margin:28px 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
+.stat{background:var(--surface);padding:22px 18px}
+.stat .n{font-family:var(--bodoni);font-style:italic;font-weight:500;font-size:34px;color:var(--chene-deep);line-height:1}
+.stat .l{font-family:var(--din-alt);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+@media(max-width:640px){.stats{grid-template-columns:1fr}}
+ul.clean{list-style:none;margin:14px 0 8px;max-width:720px}
+ul.clean li{padding:10px 0 10px 26px;position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
+ul.clean li::before{content:'';position:absolute;left:0;top:18px;width:8px;height:8px;background:var(--sauge);border-radius:50%}
+ul.clean li b{color:var(--sapin);font-weight:600}
+.callout{border-left:2px solid var(--chene);padding:6px 0 6px 22px;margin:26px 0;max-width:720px}
+.callout p{font-family:var(--bodoni);font-style:italic;font-size:18px;color:var(--chene-deep);margin:0;line-height:1.5}
+.retenir{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:24px 26px;margin:30px 0}
+.retenir h3{margin-top:0;color:var(--chene-deep)}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.tags span{font-family:var(--din-alt);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--sauge);border:1px solid var(--line-soft);border-radius:6px;padding:6px 12px}
+.quiz{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:24px 26px;margin:30px 0}
+.quiz .q{font-family:var(--din-alt);text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:var(--sapin);margin-bottom:14px}
+.quiz button{display:block;width:100%;text-align:left;background:var(--papier);color:var(--ink);border:1px solid var(--line-soft);border-radius:7px;padding:12px 15px;margin-bottom:8px;font-family:var(--walk);font-size:15px;cursor:pointer;transition:.15s}
+.quiz button:hover{border-color:var(--sauge)}
+.quiz button.ok{background:rgba(95,114,86,.14);border-color:var(--sauge);color:var(--sapin)}
+.quiz button.no{background:rgba(160,90,90,.1);border-color:#b08585}
+.quiz .fb{font-size:14px;color:var(--sauge);margin-top:6px;min-height:1.2em}
+.src{font-family:var(--din-alt);font-size:12px;color:var(--muted);line-height:1.6}
+.src b{color:var(--sauge);font-weight:500}
+.nav{display:flex;justify-content:space-between;gap:14px;padding:40px 0 70px;flex-wrap:wrap}
+.nav a{flex:1;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.nav a:hover{border-color:var(--sauge)}
+.nav .dir{font-family:var(--din-alt);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav .ttl{font-family:var(--din);text-transform:uppercase;letter-spacing:.02em;color:var(--sapin);font-size:17px;margin-top:5px}
+.nav a.next{text-align:right}
+footer{padding:30px 0 60px;text-align:center}
+footer .sig{font-family:var(--din-alt);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+footer .sig b{color:var(--sauge)}
+.tag-hyp{display:inline-block;font-family:var(--din-alt);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--chene-deep);border:1px solid rgba(160,126,60,.5);border-radius:5px;padding:3px 9px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<main><header class="hero"><div class="wrap">
+  <div class="modnum">Module 4 / 7</div>
+  <div class="kicker">Terpènes des forêts corses</div>
+  <h1>La science des parfums</h1>
+  <p class="lede">Bains de forêt, COV inhalés, effet sur l'humeur et le souffle : ce que les études établissent, ni plus, ni moins.</p>
+</div></header><div class="wrap"><section>
+<div class="kicker">Le bain de forêt</div>
+<h2>Ce que mesure le <em>shinrin-yoku</em></h2>
+<p>Au Japon, la pratique du « bain de forêt » a fait l'objet de nombreuses études. Sur le plan psychologique, les résultats sont solides : une méta-analyse portant sur 36 études et 3 554 participants conclut que les bains de forêt <strong>réduisent significativement les symptômes de dépression et d'anxiété</strong>. C'est un effet réel et reproductible.</p>
+<p>Mais la même analyse apporte une nuance capitale : les bénéfices sur les <strong>marqueurs physiologiques</strong> (tension, fréquence cardiaque) sont beaucoup moins nets. Une revue systématique antérieure jugeait les preuves encore insuffisantes, faute de méthodologies homogènes. <strong>L'effet sur le moral est bien établi ; l'effet purement physiologique reste discuté.</strong></p>
+<p class="src">Sources : Siah et al. (2023), <i>International Journal of Mental Health Nursing</i>, doi:10.1111/inm.13131 · Li et al. (2016), <i>Evidence-Based Complementary and Alternative Medicine</i>, doi:10.1155/2016/2587381</p></section><figure><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Sylvoth%C3%A9rapie_Bain_de_for%C3%AAt_Pression_sanguine_Qing_Li_2_b_FR.png" alt="" loading="lazy"><figcaption>Effet d'un bain de forêt sur la pression sanguine. Infographie Qing Li (Nippon Medical School) — CC BY 4.0.</figcaption></figure><section>
+<div class="kicker">La nuance qui compte</div>
+<h2>L'effet vient-il des molécules, ou de la promenade ?</h2>
+<p>C'est la question méthodologique centrale, et elle est honnête à poser. Quand on marche en forêt, plusieurs facteurs agissent en même temps : l'<strong>activité physique</strong>, la <strong>baisse de stress</strong> liée au cadre, le calme, la lumière, et les <strong>terpènes inhalés</strong>. Démêler la part propre des molécules est difficile. Les bénéfices observés sont vraisemblablement <strong>multifactoriels</strong> : les attribuer aux seuls terpènes serait un raccourci.</p>
+<p>Une piste sérieuse existe pourtant pour la part moléculaire : les terpénoïdes sont actifs à très faible dose. Une revue de référence note qu'ils <strong>affectent le comportement animal et même humain lorsqu'ils sont inhalés depuis l'air ambiant</strong>, à des concentrations sanguines de l'ordre de quelques nanogrammes par millilitre. Un effet par l'air n'a donc rien d'invraisemblable.</p>
+<p class="src">Source : Russo (2011), <i>British Journal of Pharmacology</i>, doi:10.1111/j.1476-5381.2011.01238.x</p>
+</section><section>
+<div class="kicker">Olfaction & souffle</div>
+<h2>L'odeur agit en retour sur le corps</h2><figure><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/AW_Lavender_steam_distillation.jpg" alt="" loading="lazy"><figcaption>Distillation à la vapeur : la méthode qui extrait les composés volatils d'une plante. Photo « 102% Yield » — CC BY-SA 4.0.</figcaption></figure>
+<p>Un résultat parlant pour qui respire fort à l'effort : la stimulation olfactive peut modifier la <strong>sensation de souffle</strong>. En conditions contrôlées, l'inhalation de menthol réduit significativement la sensation d'essoufflement pendant l'exercice, en modifiant la perception du flux d'air. L'odeur ne fait pas que se sentir : elle module ce que le corps ressent.</p>
+<p>Cet effet rejoint une donnée plus large : les odeurs et les COV de l'air influencent l'humeur, la performance et la perception. Et cette perception dépend aussi de l'état mental : fatigue, attention, souvenirs. À l'effort, le corps en éveil <strong>amplifie</strong> les sensations et l'esprit les <strong>interprète</strong>.</p>
+<p class="src">Sources : Ebihara et al. (2021), <i>Geriatrics & Gerontology International</i>, doi:10.1111/ggi.14157 · Nakajima & Fleming (2008), <i>Journal of Applied Biobehavioral Research</i>, doi:10.1111/j.1751-9861.2008.00027.x</p></section><section>
+<div class="kicker">La frontière</div>
+<h2>Ce qu'on sait, ce qu'on ne sait pas</h2>
+<ul class="clean">
+<li><b>Solidement établi</b> : l'exposition à la forêt améliore l'humeur, réduit anxiété et dépression.</li>
+<li><b>Plausible et documenté</b> : des terpènes inhalés à faible dose ont des effets biologiques mesurables.</li>
+<li><b>Encore discuté</b> : la part exacte attribuable aux seules molécules, distincte de la promenade et du cadre.</li>
+<li><b>Non démontré</b> : qu'un mélange terpénique <em>spécifique à un biome donné</em> produise un effet <em>spécifique</em> sur l'humain.</li>
+</ul>
+<div class="callout"><p>L'air des forêts agit sur nous : la science le montre. Attribuer cet effet à une signature moléculaire précise reste, aujourd'hui, une hypothèse à tester.</p></div>
+</section><section>
+<div class="quiz">
+<div class="q">Que dit la méta-analyse de référence sur les bains de forêt ?</div>
+<button data-ok="1" data-fb="Effet psychologique solide, effet physiologique moins net." onclick="pick(this,true)">Un effet net sur l'anxiété/dépression, plus discuté sur les marqueurs physiologiques</button>
+<button data-fb="L'effet physiologique est justement le moins établi." onclick="pick(this,false)">Un effet prouvé sur la tension artérielle avant tout</button>
+<button data-fb="Au contraire, l'effet psychologique est bien documenté." onclick="pick(this,false)">Aucun effet mesurable</button>
+<div class="fb"></div>
+</div>
+</section><div class="wrap"><nav class="nav"><a class="prev" href="m3_bois_microbes.html"><div class="dir">← Précédent</div><div class="ttl">Le bois qui assainit</div></a><a class="next" href="m5_atlas.html"><div class="dir">Suivant →</div><div class="ttl">L'atlas des biomes</div></a></nav></div></div><footer><div class="wrap"><div class="sig">Six-Huitième <b>·</b> Arthur Reeb <b>·</b> Studio structure bois</div></div></footer>
+</main>
+<script>
+const prog=document.getElementById('prog');
+addEventListener('scroll',()=>{const h=document.documentElement;const s=h.scrollTop/(h.scrollHeight-h.clientHeight);prog.style.width=(s*100)+'%';});
+function pick(btn,ok){const box=btn.closest('.quiz');const fb=box.querySelector('.fb');box.querySelectorAll('button').forEach(b=>b.disabled=true);if(ok){btn.classList.add('ok');fb.textContent='✓ '+(btn.dataset.fb||'Exact.');}else{btn.classList.add('no');fb.textContent='✗ '+(btn.dataset.fb||'Pas tout à fait.');box.querySelectorAll('button').forEach(b=>{if(b.dataset.ok==='1')b.classList.add('ok');});}}
+</script>
+</body></html>
