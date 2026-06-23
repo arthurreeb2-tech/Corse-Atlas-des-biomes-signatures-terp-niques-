@@ -17,7 +17,7 @@ Je veux être honnête sur le statut de cette question. C'est une intuition, pas
 
 Le point de départ formel était un Speed Défi : un exercice de conception sous contrainte, qu'on m'a proposé de mener quand j'éttais étudiant en école et que je veux réinterpréter aujourd'hui à ma façon. Plutôt que de traiter un sujet imposé, j'ai choisi de le détourner vers cette question qui me tenait au corps. Le défi est devenu : transformer une intuition de coureur en un objet plus rigoureux — un atlas qui cartographie les forêts corses, leurs essences et les molécules odorantes qu'elles émettent, pour donner une base concrète à l'enquête.
 
-J'ai organiser l'Atlas autour d'un cours qui explique mon raisonnement. Il part de la molécule (qu'est-ce qu'un terpène ?), traverse ce que la science sait vraiment de l'air des forêts sur le corps humain — ni plus, ni moins — présente l'atlas construit, et aboutit à trois hypothèses concrètes sur des « cocktails » terpéniques corses. 
+J'ai organiser l'Atlas autour de modules qui explique mon raisonnement. Il part de la molécule (qu'est-ce qu'un terpène ?), traverse ce que la science sait vraiment de l'air des forêts sur le corps humain — ni plus, ni moins — présente l'atlas construit, et aboutit à trois hypothèses sur des « cocktails » terpéniques corses. 
 
 À aucun moment il ne prétend conclure ce qui n'est pas prouvé. Son ambition est plus juste, et plus utile : montrer comment une sensation personnelle peut devenir une hypothèse de recherche défendable.
 
